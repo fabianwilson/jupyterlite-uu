@@ -1,0 +1,10 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "jupyter-config-data": {
+    "litePluginSettings": {
+      "@jupyterlite/pyodide-kernel-extension:kernel": {
+        "pyodideUrl": "https://github.com/joemarshall/pyodide/raw/pyarrow/src/js/pyodide.ts"
+      }
+    }
+  }
+}
