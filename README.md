@@ -18,4 +18,18 @@ stable Python environment.
 
 ### Downloading data and metadata
 
+## Development
 
+The repository includes a Dockerfile so that the JupyterLite build output can be inspected.
+
+To build the docker image use `docker build -t galv-jupyter .`.
+
+When you run the image, bind the local directory to `/jupyterlite` in the container.
+On Linux, you can do this with
+`docker run -v $(pwd):/jupyterlite galv-jupyter jupyter lite build --contents content --output-dir .dist`.
+
+On Windows, you can do this with
+`docker run -v .:/jupyterlite galv-jupyter jupyter lite build --contents content --output-dir .dist`.
+
+You'll find the output in the `.dist` directory. 
+This will be hidden on Linux systems, so you may need to use `ls -a` to see it.
